@@ -23,9 +23,12 @@ docker push dgunjetti/mysql-operator:latest
 sed -i "" 's|REPLACE_IMAGE|dgunjetti/mysql-operator|g' deploy/operator.yaml
 
 kubectl create -f deploy/service_account.yaml
+
 kubectl create -f deploy/role.yaml
+
 kubectl create -f deploy/role_binding.yaml
+
 kubectl create -f deploy/operator.yaml
 
-------------------------------------
+k create -f deploy/crds/mysql_v1alpha1_mysql_cr.yaml
 
