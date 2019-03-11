@@ -32,3 +32,8 @@ kubectl create -f deploy/operator.yaml
 
 k create -f deploy/crds/mysql_v1alpha1_mysql_cr.yaml
 
+Running locally.
+export OPERATOR_NAME=mysql-operator
+operator-sdk up local --namespace=default
+
+
