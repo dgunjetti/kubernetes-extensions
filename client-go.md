@@ -1,4 +1,14 @@
 
+# client-go
+Client-go provides packages and utilities to access Kubernetes API resources.
+
+## Packages
+### kubernetes
+Provides access to standard Kubernetes resources.
+
+### tools/clientcmd
+Provides utilities to build client from kubeconfig file.
+
 ## Setup
 
 ### Install k8s.io/client-go in your $GOPATH. 
