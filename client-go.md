@@ -40,9 +40,9 @@ config, err := clientcmd.BuildConfigFromFlags("", *kubeconfig)
 BuildConfigFromFlags builds kubeconfig from kubeconfig file path.If kubeconfig file path is empty, it falls back to inClusterConfig. If inClusterconfig fails, it fallsback to default config ~/.kube/config 
 
 ### Create clientset
-clientset provides access to versioned API object.
+clientset holds the Kubernetes client interface to interact with API server.
 
-Every resource in Kubernetes is member of API Group - core, extensions, batch, apps, etc...
+Every resource in Kubernetes is a member of API Group - core, extensions, batch, apps, etc...
 
 Groups also contain versions, versions allow developers to introduces changes to API. Some of versions inside a group are core/v1, extensions/v1alpha1, batch/v1beta1, apps/v1beta2
 
