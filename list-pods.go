@@ -1,4 +1,6 @@
+// list-pods.go
 // go run list-pods.go --kubeconfig=/Users/dgunjetti/.kube/kind-config-kind
+
 package main
 
 import (
