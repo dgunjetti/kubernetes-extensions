@@ -68,10 +68,18 @@ Pods are part of core API group, with version V1.
 pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
 ```
 Pod("") - Get Pods in all namespace.
-List(metav1.ListOptions{}) - Get all Pods, we are specifing empty Pod selector
+
+List(metav1.ListOptions{}) - Get all Pods, we are specifying empty Pod selector
 
 ```
 fmt.Printf("No. of Pods %d\n", len(pods.Items))
+```
+
+```
+fmt.Println("Listing Pods..")
+for _, p := range pods.Items {
+	fmt.Printf("%s\n", p.ObjectMeta.Name)
+}
 ```
 
 
