@@ -16,7 +16,7 @@ podInformer = InformerFactory.Core().V1().Pods()
 ### Resource Event Handlers
 Controllers register interest in a specific object using EventHandlers. Controller can handle create/update/delete events.
 We register callback functions which will be called by Informers to deliver events to controller. 
-
+```
 podInformer.informer().AddEventHandler(
   cache.ResourceHandler.Funcs{
     AddFunc: func(obj Interface{}) {}
@@ -24,6 +24,7 @@ podInformer.informer().AddEventHandler(
     DeleteFunc: func(obj Interface{}) {}
   }
 )
+```
 
 ### Workqueue
 Resource Event Handler callback functions obtain an object key from the events, enqueue that key to a work queue for further processing. Object key is combination of namespace and name of resource.
