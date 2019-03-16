@@ -1,4 +1,4 @@
-# Programming with Kubernetes
+# Client Libraries
 Kubernetes provides client libraries to build application over Kubernetes REST API's.
 Here we will be looking into client-go and api-machinery.
 
